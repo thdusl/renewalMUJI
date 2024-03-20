@@ -10,6 +10,7 @@ a { text-decoration: none; color: #121212;; display:block; font-family: 'Pretend
 img { width: 100%; }
 html, body {
     font-family: 'Pretendard-Regular';
+    max-width: 100%;
     overflow-x: hidden;
 }
 /* 모바일버전(1023px 이하) */
