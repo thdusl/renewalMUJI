@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>무인양품</title>
+    <!-- fullpage.css -->
+    <link rel="stylesheet" href="js/jquery.fullpage.js" type="text/css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!--  사용자 정의 css -->
+    <link rel="stylesheet" href="css/MUJI.css" type="text/css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/icon">
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="js/jquery-3.7.1.js"></script>
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/aa9969959c.js" crossorigin="anonymous"></script>
+    <!-- fullpage.js -->
+    <script src="js/jquery.fullpage.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 사용자정의 js -->
+    <script src="js/MUJI.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="center_box">
+                <!-- 로고는 모바일 버전과 pc버전이 다르므로 이미지를 배경으로 처리함 -->
+                <div class="logo"><a href="#">로고</a></div>
+                <div class="right_area">
+                    <!-- 모바일버전에서는 보이고, tablet, pc에서는 안보임 -->
+                    <div class="menu_icon">
+                        <a href="#">
+                            <svg version="1.1" id="Layer_2_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+                            <path class="menu_icon0" d="M15.5,114.7h87.2c6.7,0,12-5.4,12-12V15.5c0-6.7-5.4-12-12-12H15.5c-6.7,0-12,5.4-12,12v87.2
+                                C3.5,109.4,8.9,114.7,15.5,114.7z"/>
+                            <path class="menu_icon1" d="M15.5,104.7c-1.1,0-2-0.9-2-2V15.5c0-1.1,0.9-2,2-2h87.2c1.1,0,2,0.9,2,2v87.2c0,1.1-0.9,2-2,2H15.5z"/>
+                            <path class="menu_icon0" d="M240.5,3.5h-87.2c-6.7,0-12,5.4-12,12v87.2c0,6.7,5.4,12,12,12h87.2c6.7,0,12-5.4,12-12V15.5
+                                C252.5,8.9,247.1,3.5,240.5,3.5z"/>
+                            <path class="menu_icon0" d="M15.5,252.5h87.2c6.7,0,12-5.4,12-12v-87.2c0-6.7-5.4-12-12-12H15.5c-6.7,0-12,5.4-12,12v87.2
+                                C3.5,247.1,8.9,252.5,15.5,252.5z"/>
+                            <path class="menu_icon0" d="M240.5,141.3h-87.2c-6.7,0-12,5.4-12,12v87.2c0,6.7,5.4,12,12,12h87.2c6.7,0,12-5.4,12-12v-87.2
+                                C252.5,146.6,247.1,141.3,240.5,141.3z"/>
+                            <path class="menu_icon0" d="M153.3,242.5c-1.1,0-2-0.9-2-2v-87.2c0-1.1,0.9-2,2-2h87.2c1.1,0,2,0.9,2,2v87.2c0,1.1-0.9,2-2,2H153.3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="navi">
+                        <!-- 탑메뉴 : pc버전에서는 보임, tablet, 모바일에서는 안보임 -->
+                        <div class="pc_top_menu">
+                            <ul>
+                                <li><a href="#">
+                                    <span><svg enable-background="new 0 0 32 32" id="Layer_4" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><line class="login_icon" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="0" x2="27" y1="16" y2="16"/><polyline class="login_icon" fill="none" points="21,10 27,16    21,22  " stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><path class="login_icon" d="M9,8V3   c0-1.105,0.895-2,2-2h18c1.105,0,2,0.895,2,2v26c0,1.105-0.895,2-2,2H11c-1.105,0-2-0.895-2-2v-5" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/></g></svg></span>
+                                    <p>로그인</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <span><svg class="delivery_icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                                <title></title>
+                                <g id="user_people_person_users_man">
+                                    <path class="delivery_icon" d="M25.2,16.2c-0.5-0.5-1.2-0.5-1.7,0c-0.5,0.5-0.5,1.2,0,1.7c2,2,3.2,4.8,3.2,7.6c0,1.5-4.2,3.6-10.8,3.6S5.2,27,5.2,25.6
+                                        c0-2.9,1.1-5.6,3.1-7.6c0.5-0.5,0.5-1.2,0-1.7c-0.5-0.5-1.2-0.5-1.7,0c-2.5,2.5-3.9,5.8-3.8,9.3c0,3.9,6.8,6,13.1,6
+                                        s13.1-2.1,13.1-6C29.2,22,27.7,18.7,25.2,16.2z"/>
+                                    <path class="delivery_icon" d="M16,17.2c4.6,0,8.4-3.7,8.4-8.4S20.6,0.5,16,0.5S7.6,4.2,7.6,8.8S11.4,17.2,16,17.2z M16,2.9c3.3,0,6,2.7,6,6s-2.7,6-6,6
+                                        s-6-2.7-6-6S12.7,2.9,16,2.9z"/>
+                                </g>
+                                </svg>
+                                </span>
+                                    <p>주문배송</p>
+                                </a></li>
+                                <li><a href="#">
+                                    <span><svg class="shpping_icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g data-name="95-shopping" id="_95-shopping"><polygon class="cls-1 shpping_icon" points="27 31 5 31 6 9 26 9 27 31"/><path class="cls-1 shpping_icon" d="M11,12V6a5,5,0,0,1,5-5h0a5,5,0,0,1,5,5v6"/></g></svg></span>
+                                    <p>장바구니</p>
+                                </a></li>
+                            </ul>
+                        </div>
+                        <!-- 내비게이션 영역 -->
+                        <div class="menu">
+                            <div class="menu_in">
+                                <!-- pc에서는 보이고, tablet과 모바일에서는 안보임 -->
+                                <div class="search_lang">
+                                    <div class="search">
+                                        <input type="text" id="search">
+                                        <a href="#">
+                                            <svg class="search_icon" height="100%" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><title/><path class="search_icon" d="M221.09,64A157.09,157.09,0,1,0,378.18,221.09,157.1,157.1,0,0,0,221.09,64Z" style="fill:none;stroke-miterlimit:10;stroke-width:32px"/><line class="search_icon" style="fill:none; stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px" x1="338.29" x2="448" y1="338.29" y2="448"/></svg>
+                                        </a>
+                                    </div>
+                                    <div class="language">
+                                        <select name="" id="lang">
+                                            <option value="kor">KOR</option>
+                                            <option value="eng">NEG</option>
+                                            <option value="jpn">JPN</option>
+                                            <option value="cn">CN</option>
+                                        </select>
+                                    </div>
+                                </div><!-- search_lang -->
+                                <!-- tablet, pc에서는 안보이고, 모바일에서는 보임 -->
+                                <div class="mo_top_menu">
+                                    <ul>
+                                        <li><a href="#">
+                                            <span><svg enable-background="new 0 0 32 32" id="Layer_4" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><line class="login_icon" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="0" x2="27" y1="16" y2="16"/><polyline class="login_icon" fill="none" points="21,10 27,16    21,22  " stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><path class="login_icon" d="M9,8V3   c0-1.105,0.895-2,2-2h18c1.105,0,2,0.895,2,2v26c0,1.105-0.895,2-2,2H11c-1.105,0-2-0.895-2-2v-5" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/></g></svg></span>
+                                            <p>로그인</p>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <span><svg class="delivery_icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                                        <title></title>
+                                        <g id="user_people_person_users_man">
+                                            <path class="delivery_icon" d="M25.2,16.2c-0.5-0.5-1.2-0.5-1.7,0c-0.5,0.5-0.5,1.2,0,1.7c2,2,3.2,4.8,3.2,7.6c0,1.5-4.2,3.6-10.8,3.6S5.2,27,5.2,25.6
+                                                c0-2.9,1.1-5.6,3.1-7.6c0.5-0.5,0.5-1.2,0-1.7c-0.5-0.5-1.2-0.5-1.7,0c-2.5,2.5-3.9,5.8-3.8,9.3c0,3.9,6.8,6,13.1,6
+                                                s13.1-2.1,13.1-6C29.2,22,27.7,18.7,25.2,16.2z"/>
+                                            <path class="delivery_icon" d="M16,17.2c4.6,0,8.4-3.7,8.4-8.4S20.6,0.5,16,0.5S7.6,4.2,7.6,8.8S11.4,17.2,16,17.2z M16,2.9c3.3,0,6,2.7,6,6s-2.7,6-6,6
+                                                s-6-2.7-6-6S12.7,2.9,16,2.9z"/>
+                                        </g>
+                                        </svg>
+                                        </span>
+                                            <p>주문배송</p>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <span><svg class="shpping_icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g data-name="95-shopping" id="_95-shopping"><polygon class="cls-1 shpping_icon" points="27 31 5 31 6 9 26 9 27 31"/><path class="cls-1 shpping_icon" d="M11,12V6a5,5,0,0,1,5-5h0a5,5,0,0,1,5,5v6"/></g></svg></span>
+                                            <p>장바구니</p>
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <!-- 닫기버튼 :pc에서는 안보이고, teblet과 모바일에서는 보임 -->
+                                <div class="close_btn">
+                                    <a href="#">
+                                        <svg enable-background="new 0 0 256 256" 
+                                        class="close_icon" height="100%" id="Layer_1" version="1.1" viewBox="0 0 256 256" width="256px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M137.051,128l75.475-75.475c2.5-2.5,2.5-6.551,0-9.051s-6.551-2.5-9.051,0L128,118.949L52.525,43.475  c-2.5-2.5-6.551-2.5-9.051,0s-2.5,6.551,0,9.051L118.949,128l-75.475,75.475c-2.5,2.5-2.5,6.551,0,9.051  c1.25,1.25,2.888,1.875,4.525,1.875s3.275-0.625,4.525-1.875L128,137.051l75.475,75.475c1.25,1.25,2.888,1.875,4.525,1.875  s3.275-0.625,4.525-1.875c2.5-2.5,2.5-6.551,0-9.051L137.051,128z"/></svg>
+                                    </a>
+                                </div>
+                            </div><!-- menu_in -->
+                            <!-- 글로벌 내비게이션 -->
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p>패션잡화</p>
+                                            <div class="plus_icon">
+                                                <span class="row_line"></span>
+                                                <span class="col_line"></span>
+                                            </div>
+                                        </a>
+                                        <ul class="sub">
+                                            <li><a href="#">MUJI LABO</a></li>
+                                            <li><a href="#">남성복</a></li>
+                                            <li><a href="#">여성복</a></li>
+                                            <li><a href="#">가방·신발</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>생활잡화</p>
+                                            <div class="plus_icon">
+                                                <span class="row_line"></span>
+                                                <span class="col_line"></span>
+                                            </div>
+                                        </a>
+                                        <ul class="sub">
+                                            <li><a href="#">가구·인테리어</a></li>
+                                            <li><a href="#">주방·생활용품</a></li>
+                                            <li><a href="#">화장품</a></li>
+                                            <li><a href="#">문구</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>식품</p>
+                                            <div class="plus_icon">
+                                                <span class="row_line"></span>
+                                                <span class="col_line"></span>
+                                            </div>
+                                        </a>
+                                        <ul class="sub">
+                                            <li><a href="#">과자·음료·소스</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>주간신상</p>
+                                            <div class="plus_icon">
+                                                <span class="row_line"></span>
+                                                <span class="col_line"></span>
+                                            </div>
+                                        </a>
+                                        <ul class="sub">
+                                            <li><a href="#">패션잡화</a></li>
+                                            <li><a href="#">생활잡화</a></li>
+                                            <li><a href="#">식품</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>스태프 스냅</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>MUJI MAGAZINE</p>
+                                            <div class="plus_icon">
+                                                <span class="row_line"></span>
+                                                <span class="col_line"></span>
+                                            </div>
+                                        </a>
+                                        <ul class="sub">
+                                            <li><a href="#">MD 추천상품</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>아울렛</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div><!--menu-->
+                    </div>
+                    <!-- pc버전 내비게이션 서브메뉴 배경 -->
+                    <div class="sub_bg"></div>
+                </div>
+            </div>
+        </header>
+        <section class="section s1">
+            <!-- 아이콘 4개(나는 글자) -->
+            <div class="movie">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/m_Mw40lNYWk?si=t-1HM_bhBP79RDiY&amp;controls=0&autoplay=1&mute=1&loop=1&playlist=m_Mw40lNYWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="main_icon">
+                <ul>
+                    <li><a href="#">신상품<br>&<br>인기상품</a></li>
+                    <li><a href="#">봄 아이템</a></li>
+                    <li><a href="#">세일</a></li>
+                    <li><a href="#">계절의 추천</a></li>
+                    <li><a href="#">매일 매거진</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="section s2">
+            <div class="center_box">
+                <div class="b_txt">
+                    <h1>기획전</h1>
+                    <p>무인양품의 다양한 시리즈를 <br class="br_m"> 살펴보세요</p>
+                </div>
+                <div class="banner1">
+                    <ul>
+                        <!-- 사진은 배경으로, pc버전의 마우스 오버효과와 아이콘의 글자는 겹침 -->
+                        <li>
+                            <a href="#">
+                                <!-- 마우스 오버 영역 -->
+                                <div class="hover"></div>
+                                <div class="icon_txt">
+                                    <div class="icon_bg">
+                                        <img src="img/pen_s2.svg" alt="문구 시리즈">
+                                    </div>
+                                    <div class="txt">
+                                        <h2>문구 시리즈</h2>
+                                        <hr>
+                                        <p>막힘없이 기록하고 추억하고 싶을 때</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <!-- 마우스 오버 영역 -->
+                                <div class="hover"></div>
+                                <div class="icon_txt">
+                                    <div class="icon_bg">
+                                        <img src="img/box_s2.svg" alt="가구수납 시리즈">
+                                    </div>
+                                    <div class="txt">
+                                        <h2>가구수납 시리즈</h2>
+                                        <hr>
+                                        <p>장소나 용도에 맞추어 자유롭게 조합해서 수납하고 싶을 때</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <!-- 마우스 오버 영역 -->
+                                <div class="hover"></div>
+                                <div class="icon_txt">
+                                    <div class="icon_bg">
+                                        <img src="img/lotion_s2.svg" alt="스킨케어 시리즈">
+                                    </div>
+                                    <div class="txt">
+                                        <h2>스킨케어 시리즈</h2>
+                                        <hr>
+                                        <p>환절기 피부 자극을 잠재우고 싶을 때</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section s3">
+            <div class="center_box">
+                <div class="goods">
+                    <div class="b_txt">
+                        <h1>신상품</h1>
+                    </div>
+                    <!-- Swiper 개별-->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <i><img src="img/s3_N_1.jpg" alt="얇은이불"></i>
+                                </a>
+                                <p>얇은 이불ㆍ블루ㆍDㆍ면 서커</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <i><img src="img/s3_N_2.jpg" alt="목제티슈박스"></i>
+                                </a>
+                                <p>목제 티슈 박스ㆍ티슈 페이퍼용</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <i><img src="img/s3_N_3.jpg" alt="목제거울"></i>
+                                <p>목제 거울ㆍSㆍ아카시아 </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <i><img src="img/s3_N_4.jpg" alt="소파"></i>
+                                <p>하이백 리클라이닝 소파</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <i><img src="img/s3_N_5.jpg" alt="라운드 손잡이 바스켓"></i>
+                                <p>라운드 손잡이 바스켓 Lㆍ부레옥잠</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <i><img src="img/s3_N_6.jpg" alt="여성·발수·후드 재킷"></i>
+                                <p>여성ㆍ발수ㆍ후드 재킷</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <i><img src="img/s3_N_7.jpg" alt="남성·발수·후드 재킷"></i>
+                                <p>남성ㆍ발수ㆍ후드 재킷</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <i><img src="img/s3_N_8.jpg" alt="여성·테리·크루넥 풀오버 셔츠"></i>
+                                <p>여성ㆍ테리ㆍ크루넥 풀오버 셔츠</p>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="goods">
+                    <div class="b_txt">
+                        <h1>인기 상품</h1>
+                    </div>
+                    <!-- Swiper 개별-->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <i><img src="img/s3_H_1.jpg" alt="케이블 수납 케이스"></i>
+                                <p>케이블 수납 케이스ㆍ스마트폰 스탠드 포함</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <i><img src="img/s3_H_2.jpg" alt="물티슈 케이스"></i>
+                                <p>입구가 넓어 꺼내기 편리한 물티슈 케이스</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <i><img src="img/s3_H_3.jpg" alt="스탠드 파일박스"></i>
+                                <p>스탠드 파일박스ㆍA4용ㆍ화이트 그레이</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <i><img src="img/s3_H_4.jpg" alt="소프트박스 의류 케이스"></i>
+                                <p>무인양품 면 리빙박스 소프트박스 의류 케이스 L</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <i><img src="img/s3_H_5.jpg" alt="여성 파자마"></i>
+                                <p>무인양품 소프트 면 커플잠옷 여성 이중가제 파자마</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <i><img src="img/s3_H_6.jpg" alt="스니커"></i>
+                                <p>발수 발이 편한ㆍ스니커</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <i><img src="img/s3_H_7.jpg" alt="9부소매 티셔츠"></i>
+                                <p>남성ㆍ워싱 태번수ㆍ보트넥 9부소매 티셔츠</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <i><img src="img/s3_H_8.jpg" alt="긴소매 셔츠"></i>
+                                <p>남성ㆍ워싱 브로드ㆍ레귤러 칼라 긴소매 셔츠</p>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section class="section s4">
+            <div class="b_txt">
+                <h1>새로운 봄을 설레게 하는 아이템</h1>
+                <p>봄을 맞이하면서 새로운 아이템으로 새로운 기분을 느껴보세요</p>
+            </div>
+            <div class="banner4">
+                <ul>
+                    <li><a href="#">
+                        <div class="photo">
+                            <img src="img/spring1.jpg" alt="봄아이템">
+                        </div>
+                        <span>다양한 TPO에 활용할 수 있는 기본템</span>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="photo">
+                            <img src="img/spring2.jpg" alt="봄아이템">
+                        </div>
+                        <span>발이 편하고 걷기 편한 스니커</span>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="photo">
+                            <img src="img/spring3.jpg" alt="봄아이템">
+                        </div>
+                        <span>들고 다니기에도, 작업하기에도, 보관하기에도 편한 클립보드</span>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="photo">
+                            <img src="img/spring4.jpg" alt="봄아이템">
+                        </div>
+                        <span>깔끔한 기본템! 스트라이프 티셔츠로 꾸안꾸룩 완성</span>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="photo">
+                            <img src="img/spring5.png" alt="봄아이템">
+                        </div>
+                        <span>소박하지만 중독성이 있는 간식</span>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="photo">
+                            <img src="img/spring6.jpg" alt="봄아이템">
+                        </div>
+                        <span>사계절 내내 입기 좋은 파자마</span>
+                    </a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="section s5">
+            <div class="center_box">
+                <div class="b_txt">
+                    <h1>SELE</h1>
+                    <p>한정 기간, 한정 수량 특가 혜택</p>
+                    <p>무인양품이 준비한 다양한 상품을 만나보세요</p>
+                </div>
+                <div class="banner1">
+                    <ul>
+                        <!-- 사진은 배경으로, pc버전의 마우스 오버효과와 아이콘의 글자는 겹침 -->
+                        <li>
+                            <a href="#">
+                                <!-- 마우스 오버 영역 -->
+                                <div class="hover"></div>
+                                <div class="icon_txt">
+                                    <div class="icon_bg">
+                                        <img src="img/star_s5.svg" alt="온라인 단독 봄맞이 특가 아이콘">
+                                    </div>
+                                    <div class="txt">
+                                        <h2>온라인 단독 봄 맞이 특가</h2>
+                                        <hr>
+                                        <p>공홈 단독 특가 상품과 MUJI BEST 20</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <!-- 마우스 오버 영역 -->
+                                <div class="hover"></div>
+                                <div class="icon_txt">
+                                    <div class="icon_bg">
+                                        <img src="img/sale_s5.svg" alt="MUJI 특별가">
+                                    </div>
+                                    <div class="txt">
+                                        <h2>MUJI 특별가</h2>
+                                        <hr>
+                                        <p>의복잡화 & 생활잡화</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <!-- 마우스 오버 영역 -->
+                                <div class="hover"></div>
+                                <div class="icon_txt">
+                                    <div class="icon_bg">
+                                        <img src="img/sale24_s5.png" alt="MUJI 주간 특가">
+                                    </div>
+                                    <div class="txt">
+                                        <h2>MUJI 주간 특가</h2>
+                                        <hr>
+                                        <p>기간 한정 특가 상품</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section s6">
+            <div class="b_txt">
+                <h1>MUJI 매거진</h1>
+                <p>소식과 다양한 브랜드 스토리를 매월 1회 10%쿠폰과 함께 보내드립니다</p>
+                <a href="#">매일 매거진 신청 ▶</a>
+            </div>
+            <div class="banner6">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="img/muJi.png" alt="가구·가전·패브릭">
+                            <h2>가구·가전·패브릭</h2>
+                            <hr>
+                            <p>카탈로그 다운로드</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/sns.png" alt="sns">
+                            <h2>SNS</h2>
+                            <hr>
+                            <p>MUJI 인스타그램</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/app.png" alt="모바일 앱">
+                            <h2>모바일 앱</h2>
+                            <hr>
+                            <p>MUJI passport</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/blog.png" alt="블로그">
+                            <h2>BLOG</h2>
+                            <hr>
+                            <p>MUJI 블로그</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section s7">
+            <div class="b_txt">
+                <h1>계절의 추천</h1>
+                <p>겨울이 가기 전 따뜻하게 보내기 위해 선택할 수 있는 최고의 상품들로 추천합니다.</p>
+            </div>
+            <div class="banner7">
+                <ul>
+                    <li><a href="#">
+                        <div class="hover s7_hover1"></div>
+                        <div class="txt">
+                            <h2>구스깃털이불</h2>
+                            <hr>
+                            <p>재고 소진 전까지 <br class="br_m"> 마지막 특가</p>
+                        </div>
+                        <div class="small_deco s7_deco1"> </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="hover s7_hover2"></div>
+                        <div class="txt">
+                            <h2>기능성 이너웨어</h2>
+                            <hr>
+                            <p>가을, 겨울에 입기 좋은 <br class="br_m">기능성 이너웨어</p>
+                        </div>
+                        <div class="small_deco s7_deco2"> </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="hover s7_hover3"></div>
+                        <div class="txt">
+                            <h2>경량 다운 포케터블</h2>
+                            <hr>
+                            <p>천연소재와 포근하게 <br class="br_m">계절 맞이</p>
+                        </div>
+                        <div class="small_deco s7_deco3"> </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="hover s7_hover4"></div>
+                        <div class="txt">
+                            <h2>니트 웨어</h2>
+                            <hr>
+                            <p>추워진 계절의 따스함</p>
+                        </div>
+                        <div class="small_deco s7_deco4"> </div>
+                    </a></li>
+                </ul>
+            </div>
+        </section>
+        <footer class="section auto-height">
+            <div class="footer_logo">
+                <img src="img/footer_logo.png" alt="로고">
+            </div>
+            <div class="info">
+                <ul>
+                    <li><a href="#">LECS안내 및 문의</a></li>
+                    <li><a href="#">롯데쇼핑e커머스사업부소개</a></li>
+                    <li><a href="#">개인정보처리 방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">청소년보호방침</a></li>
+                    <li><a href="#">회원가입 / 탈퇴</a></li>
+                </ul>
+            </div>
+            <address>
+                서울특별시 송파구 올림픽로 300 롯데월드타워 26층
+                <br>
+                롯데쇼핑 주식회사 대표이사 김사무엘상현, 정준호, 강성현
+                <br>
+                사업자등록번호 : 529-85-00774 (롯데쇼핑(주) e커머스사업부)
+            </address>
+            <p><b>고객만족 센터</b> : 1577-2892  muji@lotte.net</p>
+            <p>Copyright LOTTE SHOPPING Co., Ltd. e-commerce Business Division All right reserved.</p>
+            <div class="service_family">
+                <div class="service">
+                    <ul>
+                        <p>온·오프라인 서비스 안내</p>
+                        <div class="service_box">  
+                            <li><a href="#">
+                                <img src="img/footer_service1.png" alt="전국 muji 매장정보">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/footer_service2.png" alt="인테리어(IA) 어드바이저 서비스">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/footer_service3.png" alt="온라인 아울렛">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/footer_service4.png" alt="매일 매거진">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/footer_service5.png" alt="사용설명서 다운로드">
+                            </a></li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="family">
+                    <div class="family_title">
+                        <a href="#">글로벌 사이트 <span></span></a>
+                    </div>
+                    <div class="family_list">
+                        <a href="#">Japan</a>
+                        <a href="#">U.K.</a>
+                        <a href="#">Bahrain</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
