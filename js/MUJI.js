@@ -76,7 +76,7 @@ $(function(){
             //내가 추가 (근데 스와이퍼가 있는 상품란이 안됨)
             anchors:["","","anchor3","anchor4","anchor5","anchor6","anchor7",],
             navigationTooltips:["","기획전","신상품&인기상품","봄 아이템","세일","매일 매거진","계절의 추천"],
-            showAciveTooltip:true
+            showAciveTooltip:true,
         });
     }
 

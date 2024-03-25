@@ -1038,9 +1038,6 @@ footer .service_family .service ul .service_box li:nth-child(2) {
 footer .service_family .family  {
     width: 150px;
 }
-footer .service_family .family .family_title {
-    /* padding-left: 28%; */
-}
 
 }
 /* pc버전(1400px 이상) */
@@ -1053,22 +1050,23 @@ header {
     height:130px;
 }
 header .center_box {
-    width: 75vw;
+    /* width: 75vw; */
+    width: 100%;
     /* 부모의 높이로 맞춤 */
     height: 100%;
     margin:0 auto;
-    padding:1vw;
+    /* padding:1vw; */
     /* flex-flow:row wrap;   행기준, 줄바꿈 허용 */
 }
 header .logo {
-    width: 13vw;
-    height: 2.8vw;
+    width: 11.1vw;
+    height: 2.3vw;
 }
 header .logo a {
     background-image: url(../img/logo_pc.png);
 }
 header .right_area {
-    width: 78%;
+    width: 83.5%;
     flex-flow: column nowrap;
     align-items: normal;
 }
@@ -1572,5 +1570,9 @@ footer .service_family .family {
 footer .service_family .family .family_title {
     padding-left: 10%;
 }
-
+#fp-nav ul li .fp-tooltip {
+    color: #800019;
+    font-weight: bold;
+    /* text-shadow: 0 0 1px #fff; */
+}
 }
