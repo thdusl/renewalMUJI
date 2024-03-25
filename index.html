@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+ 
     <title>무인양품</title>
     <!-- fullpage.css -->
-    <link rel="stylesheet" href="js/jquery.fullpage.js" type="text/css">
+    <link rel="stylesheet" href="css/jquery.fullpage.css" type="text/css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!--  사용자 정의 css -->
@@ -24,7 +25,7 @@
     <script src="js/MUJI.js"></script>
 </head>
 <body>
-    <div class="wrap">
+    <div class="wrap fullpage">
         <header>
             <div class="center_box">
                 <!-- 로고는 모바일 버전과 pc버전이 다르므로 이미지를 배경으로 처리함 -->
@@ -226,15 +227,16 @@
         <section class="section s1">
             <!-- 아이콘 4개(나는 글자) -->
             <div class="movie">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/m_Mw40lNYWk?si=t-1HM_bhBP79RDiY&amp;controls=0&autoplay=1&mute=1&loop=1&playlist=m_Mw40lNYWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <!-- &rel=0 : 유튜브 관련 동영상 안뜸 -->
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/m_Mw40lNYWk?si=t-1HM_bhBP79RDiY&amp;controls=0&autoplay=1&mute=1&rel=0&loop=1&playlist=m_Mw40lNYWk" title="YouTube video player" frameborder="0" data-keepplaying data allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <div class="main_icon">
+            <div class="main_icon" id="main_icon">
                 <ul>
-                    <li><a href="#">신상품<br>&<br>인기상품</a></li>
-                    <li><a href="#">봄 아이템</a></li>
-                    <li><a href="#">세일</a></li>
-                    <li><a href="#">계절의 추천</a></li>
-                    <li><a href="#">매일 매거진</a></li>
+                    <li><a href="#anchor3" data-menuanchor="anchor3">신상품<br>&<br>인기상품</a></li>
+                    <li><a href="#anchor4" data-menuanchor="anchor4">봄 아이템</a></li>
+                    <li><a href="#anchor5" data-menuanchor="anchor5">세일</a></li>
+                    <li><a href="#anchor7" data-menuanchor="anchor7">계절의 추천</a></li>
+                    <li><a href="#anchor6" data-menuanchor="anchor6">매일 매거진</a></li>
                 </ul>
             </div>
         </section>
@@ -242,7 +244,7 @@
             <div class="center_box">
                 <div class="b_txt">
                     <h1>기획전</h1>
-                    <p>무인양품의 다양한 시리즈를 <br class="br_m"> 살펴보세요</p>
+                    <p>무인양품의 다양한 시리즈를 살펴보세요</p>
                 </div>
                 <div class="banner1">
                     <ul>
@@ -309,39 +311,35 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="#">
-                                    <i><img src="img/s3_N_1.jpg" alt="얇은이불"></i>
-                                </a>
+                                <a href="#"><img src="img/s3_N_1.jpg" alt="얇은이불"></a>
                                 <p>얇은 이불ㆍ블루ㆍDㆍ면 서커</p>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#">
-                                    <i><img src="img/s3_N_2.jpg" alt="목제티슈박스"></i>
-                                </a>
+                                <a href="#"><img src="img/s3_N_2.jpg" alt="목제티슈박스"></a>
                                 <p>목제 티슈 박스ㆍ티슈 페이퍼용</p>
                             </div>
                             <div class="swiper-slide">
-                                <i><img src="img/s3_N_3.jpg" alt="목제거울"></i>
+                                <a href="#"><img src="img/s3_N_3.jpg" alt="목제거울"></a>
                                 <p>목제 거울ㆍSㆍ아카시아 </p>
                             </div>
                             <div class="swiper-slide">
-                                <i><img src="img/s3_N_4.jpg" alt="소파"></i>
+                                <a href="#"><img src="img/s3_N_4.jpg" alt="소파"></a>
                                 <p>하이백 리클라이닝 소파</p>
                             </div>
                             <div class="swiper-slide">
-                                <i><img src="img/s3_N_5.jpg" alt="라운드 손잡이 바스켓"></i>
+                                <a href="#"><img src="img/s3_N_5.jpg" alt="라운드 손잡이 바스켓"></a>
                                 <p>라운드 손잡이 바스켓 Lㆍ부레옥잠</p>
                             </div>
                             <div class="swiper-slide">
-                                <i><img src="img/s3_N_6.jpg" alt="여성·발수·후드 재킷"></i>
+                                <a href="#"><img src="img/s3_N_6.jpg" alt="여성·발수·후드 재킷"></a>
                                 <p>여성ㆍ발수ㆍ후드 재킷</p>
                             </div>
                             <div class="swiper-slide">
-                                <i><img src="img/s3_N_7.jpg" alt="남성·발수·후드 재킷"></i>
+                                <a href="#"><img src="img/s3_N_7.jpg" alt="남성·발수·후드 재킷"></a>
                                 <p>남성ㆍ발수ㆍ후드 재킷</p>
                             </div>
                             <div class="swiper-slide">
-                                <i><img src="img/s3_N_8.jpg" alt="여성·테리·크루넥 풀오버 셔츠"></i>
+                                <a href="#"><img src="img/s3_N_8.jpg" alt="여성·테리·크루넥 풀오버 셔츠"></a>
                                 <p>여성ㆍ테리ㆍ크루넥 풀오버 셔츠</p>
                             </div>
                         </div>
@@ -361,35 +359,35 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <i><img src="img/s3_H_1.jpg" alt="케이블 수납 케이스"></i>
+                                <a href="#"><img src="img/s3_H_1.jpg" alt="케이블 수납 케이스"></a>
                                 <p>케이블 수납 케이스ㆍ스마트폰 스탠드 포함</p>
                             </div>
                             <div class="swiper-slide">
-                                <i><img src="img/s3_H_2.jpg" alt="물티슈 케이스"></i>
+                                <a href="#"><img src="img/s3_H_2.jpg" alt="물티슈 케이스"></a>
                                 <p>입구가 넓어 꺼내기 편리한 물티슈 케이스</p>
                             </div>
                             <div class="swiper-slide">
-                                <i><img src="img/s3_H_3.jpg" alt="스탠드 파일박스"></i>
+                                <a href="#"><img src="img/s3_H_3.jpg" alt="스탠드 파일박스"></a>
                                 <p>스탠드 파일박스ㆍA4용ㆍ화이트 그레이</p>
                             </div>
                             <div class="swiper-slide">
-                                <i><img src="img/s3_H_4.jpg" alt="소프트박스 의류 케이스"></i>
+                                <a href="#"><img src="img/s3_H_4.jpg" alt="소프트박스 의류 케이스"></a>
                                 <p>무인양품 면 리빙박스 소프트박스 의류 케이스 L</p>
                             </div>
                             <div class="swiper-slide">
-                                <i><img src="img/s3_H_5.jpg" alt="여성 파자마"></i>
+                                <a href="#"><img src="img/s3_H_5.jpg" alt="여성 파자마"></a>
                                 <p>무인양품 소프트 면 커플잠옷 여성 이중가제 파자마</p>
                             </div>
                             <div class="swiper-slide">
-                                <i><img src="img/s3_H_6.jpg" alt="스니커"></i>
+                                <a href="#"><img src="img/s3_H_6.jpg" alt="스니커"></a>
                                 <p>발수 발이 편한ㆍ스니커</p>
                             </div>
                             <div class="swiper-slide">
-                                <i><img src="img/s3_H_7.jpg" alt="9부소매 티셔츠"></i>
+                                <a href="#"><img src="img/s3_H_7.jpg" alt="9부소매 티셔츠"></a>
                                 <p>남성ㆍ워싱 태번수ㆍ보트넥 9부소매 티셔츠</p>
                             </div>
                             <div class="swiper-slide">
-                                <i><img src="img/s3_H_8.jpg" alt="긴소매 셔츠"></i>
+                                <a href="#"><img src="img/s3_H_8.jpg" alt="긴소매 셔츠"></a>
                                 <p>남성ㆍ워싱 브로드ㆍ레귤러 칼라 긴소매 셔츠</p>
                             </div>
                         </div>
@@ -403,55 +401,57 @@
             </div>
         </section>
         <section class="section s4">
-            <div class="b_txt">
-                <h1>새로운 봄을 설레게 하는 아이템</h1>
-                <p>봄을 맞이하면서 새로운 아이템으로 새로운 기분을 느껴보세요</p>
-            </div>
-            <div class="banner4">
-                <ul>
-                    <li><a href="#">
-                        <div class="photo">
-                            <img src="img/spring1.jpg" alt="봄아이템">
-                        </div>
-                        <span>다양한 TPO에 활용할 수 있는 기본템</span>
-                    </a></li>
-                    <li><a href="#">
-                        <div class="photo">
-                            <img src="img/spring2.jpg" alt="봄아이템">
-                        </div>
-                        <span>발이 편하고 걷기 편한 스니커</span>
-                    </a></li>
-                    <li><a href="#">
-                        <div class="photo">
-                            <img src="img/spring3.jpg" alt="봄아이템">
-                        </div>
-                        <span>들고 다니기에도, 작업하기에도, 보관하기에도 편한 클립보드</span>
-                    </a></li>
-                    <li><a href="#">
-                        <div class="photo">
-                            <img src="img/spring4.jpg" alt="봄아이템">
-                        </div>
-                        <span>깔끔한 기본템! 스트라이프 티셔츠로 꾸안꾸룩 완성</span>
-                    </a></li>
-                    <li><a href="#">
-                        <div class="photo">
-                            <img src="img/spring5.png" alt="봄아이템">
-                        </div>
-                        <span>소박하지만 중독성이 있는 간식</span>
-                    </a></li>
-                    <li><a href="#">
-                        <div class="photo">
-                            <img src="img/spring6.jpg" alt="봄아이템">
-                        </div>
-                        <span>사계절 내내 입기 좋은 파자마</span>
-                    </a></li>
-                </ul>
+            <div class="center_box">
+                <div class="b_txt">
+                    <h1>새로운 봄을 설레게 하는 아이템</h1>
+                    <p>봄을 맞이하면서 새로운 아이템으로 새로운 기분을 느껴보세요</p>
+                </div>
+                <div class="banner4">
+                    <ul>
+                        <li><a href="#">
+                            <div class="photo">
+                                <img src="img/spring1.jpg" alt="봄아이템">
+                            </div>
+                            <span>다양한 TPO에 활용할 수 있는 기본템</span>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="photo">
+                                <img src="img/spring2.jpg" alt="봄아이템">
+                            </div>
+                            <span>발이 편하고 걷기 편한 스니커</span>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="photo">
+                                <img src="img/spring3.jpg" alt="봄아이템">
+                            </div>
+                            <span>들고 다니기에도, 작업하기에도, 보관하기에도 편한 클립보드</span>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="photo">
+                                <img src="img/spring4.jpg" alt="봄아이템">
+                            </div>
+                            <span>깔끔한 기본템! 스트라이프 티셔츠로 꾸안꾸룩 완성</span>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="photo">
+                                <img src="img/spring5.png" alt="봄아이템">
+                            </div>
+                            <span>소박하지만 중독성이 있는 간식</span>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="photo">
+                                <img src="img/spring6.jpg" alt="봄아이템">
+                            </div>
+                            <span>사계절 내내 입기 좋은 파자마</span>
+                        </a></li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="section s5">
             <div class="center_box">
                 <div class="b_txt">
-                    <h1>SELE</h1>
+                    <h1>SALE</h1>
                     <p>한정 기간, 한정 수량 특가 혜택</p>
                     <p>무인양품이 준비한 다양한 상품을 만나보세요</p>
                 </div>
@@ -496,7 +496,7 @@
                                 <div class="hover"></div>
                                 <div class="icon_txt">
                                     <div class="icon_bg">
-                                        <img src="img/sale24_s5.png" alt="MUJI 주간 특가">
+                                        <img src="img/24icion.svg" alt="MUJI주간특가">
                                     </div>
                                     <div class="txt">
                                         <h2>MUJI 주간 특가</h2>
@@ -511,10 +511,12 @@
             </div>
         </section>
         <section class="section s6">
-            <div class="b_txt">
-                <h1>MUJI 매거진</h1>
-                <p>소식과 다양한 브랜드 스토리를 매월 1회 10%쿠폰과 함께 보내드립니다</p>
-                <a href="#">매일 매거진 신청 ▶</a>
+            <div class="center_box">
+                <div class="b_txt">
+                    <h1>MUJI 매거진</h1>
+                    <p>소식과 다양한 브랜드 스토리를 매월 1회 10%쿠폰과 함께 보내드립니다</p>
+                    <a href="#">매일 매거진 신청 ▶</a>
+                </div>
             </div>
             <div class="banner6">
                 <ul>
@@ -554,52 +556,54 @@
             </div>
         </section>
         <section class="section s7">
-            <div class="b_txt">
-                <h1>계절의 추천</h1>
-                <p>겨울이 가기 전 따뜻하게 보내기 위해 선택할 수 있는 최고의 상품들로 추천합니다.</p>
-            </div>
-            <div class="banner7">
-                <ul>
-                    <li><a href="#">
-                        <div class="hover s7_hover1"></div>
-                        <div class="txt">
-                            <h2>구스깃털이불</h2>
-                            <hr>
-                            <p>재고 소진 전까지 <br class="br_m"> 마지막 특가</p>
-                        </div>
-                        <div class="small_deco s7_deco1"> </div>
-                    </a></li>
-                    <li><a href="#">
-                        <div class="hover s7_hover2"></div>
-                        <div class="txt">
-                            <h2>기능성 이너웨어</h2>
-                            <hr>
-                            <p>가을, 겨울에 입기 좋은 <br class="br_m">기능성 이너웨어</p>
-                        </div>
-                        <div class="small_deco s7_deco2"> </div>
-                    </a></li>
-                    <li><a href="#">
-                        <div class="hover s7_hover3"></div>
-                        <div class="txt">
-                            <h2>경량 다운 포케터블</h2>
-                            <hr>
-                            <p>천연소재와 포근하게 <br class="br_m">계절 맞이</p>
-                        </div>
-                        <div class="small_deco s7_deco3"> </div>
-                    </a></li>
-                    <li><a href="#">
-                        <div class="hover s7_hover4"></div>
-                        <div class="txt">
-                            <h2>니트 웨어</h2>
-                            <hr>
-                            <p>추워진 계절의 따스함</p>
-                        </div>
-                        <div class="small_deco s7_deco4"> </div>
-                    </a></li>
-                </ul>
+            <div>
+                <div class="b_txt">
+                    <h1>계절의 추천</h1>
+                    <p>겨울이 가기 전 따뜻하게 보내기 위해 선택할 수 있는 최고의 상품들로 추천합니다.</p>
+                </div>
+                <div class="banner7">
+                    <ul>
+                        <li><a href="#">
+                            <div class="hover s7_hover1"></div>
+                            <div class="txt">
+                                <h2>구스깃털이불</h2>
+                                <hr>
+                                <p>재고 소진 전까지 <br class="br_m"> 마지막 특가</p>
+                            </div>
+                            <div class="small_deco s7_deco1"> </div>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="hover s7_hover2"></div>
+                            <div class="txt">
+                                <h2>기능성 이너웨어</h2>
+                                <hr>
+                                <p>가을, 겨울에 입기 좋은 <br class="br_m">기능성 이너웨어</p>
+                            </div>
+                            <div class="small_deco s7_deco2"> </div>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="hover s7_hover3"></div>
+                            <div class="txt">
+                                <h2>경량 다운 포케터블</h2>
+                                <hr>
+                                <p>천연소재와 포근하게 <br class="br_m">계절 맞이</p>
+                            </div>
+                            <div class="small_deco s7_deco3"> </div>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="hover s7_hover4"></div>
+                            <div class="txt">
+                                <h2>니트 웨어</h2>
+                                <hr>
+                                <p>추워진 계절의 따스함</p>
+                            </div>
+                            <div class="small_deco s7_deco4"> </div>
+                        </a></li>
+                    </ul>
+                </div>
             </div>
         </section>
-        <footer class="section auto-height">
+        <footer class="section fp-auto-height">
             <div class="footer_logo">
                 <img src="img/footer_logo.png" alt="로고">
             </div>
@@ -615,7 +619,7 @@
             </div>
             <address>
                 서울특별시 송파구 올림픽로 300 롯데월드타워 26층
-                <br>
+                <br class="br_m">
                 롯데쇼핑 주식회사 대표이사 김사무엘상현, 정준호, 강성현
                 <br>
                 사업자등록번호 : 529-85-00774 (롯데쇼핑(주) e커머스사업부)
@@ -628,19 +632,19 @@
                         <p>온·오프라인 서비스 안내</p>
                         <div class="service_box">  
                             <li><a href="#">
-                                <img src="img/footer_service1.png" alt="전국 muji 매장정보">
+                                <img src="img/footer_service1_new.png" alt="전국 muji 매장정보">
                             </a></li>
                             <li><a href="#">
-                                <img src="img/footer_service2.png" alt="인테리어(IA) 어드바이저 서비스">
+                                <img src="img/footer_service2_new.png" alt="인테리어(IA) 어드바이저 서비스">
                             </a></li>
                             <li><a href="#">
-                                <img src="img/footer_service3.png" alt="온라인 아울렛">
+                                <img src="img/footer_service3_new.png" alt="온라인 아울렛">
                             </a></li>
                             <li><a href="#">
-                                <img src="img/footer_service4.png" alt="매일 매거진">
+                                <img src="img/footer_service4_new.png" alt="매일 매거진">
                             </a></li>
                             <li><a href="#">
-                                <img src="img/footer_service5.png" alt="사용설명서 다운로드">
+                                <img src="img/footer_service5_new.png" alt="사용설명서 다운로드">
                             </a></li>
                         </div>
                     </ul>

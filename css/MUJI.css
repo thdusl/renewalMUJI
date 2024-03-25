@@ -3,20 +3,23 @@
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
+    src: local('Apple SD Gothic Neo'), local('Nanum Gothic');
 }
 *{ margin:0; padding:0; box-sizing: border-box; }
 li {list-style: none; }
 a { text-decoration: none; color: #121212;; display:block; font-family: 'Pretendard-Regular';}
 img { width: 100%; }
-html, body {
+html,body {
     font-family: 'Pretendard-Regular';
-    max-width: 100%;
-    overflow-x: hidden;
+    width: 100%;
+    overflow-x: hidden; 
+    position: relative;
+    /* overscroll-behavior: none; */
 }
 /* 모바일버전(1023px 이하) */
 .wrap { width:100%; }
 header { 
-    width:100%; height: 70px; 
+    width:100%; height: 16vw; 
     /* section1과 겹침 */
     position:absolute;
     z-index: 50;
@@ -25,7 +28,8 @@ header {
 }
 header .center_box {
     width:100%;
-    height:70px;
+    /* height:70px; */
+    height: 16vw; 
     display: flex;
     flex-flow:row nowrap;
     justify-content: space-between;
@@ -60,18 +64,23 @@ header .pc_top_menu {
 header .menu {
     display: block;
     width:100%;
-    height:110vh;
+    /* height:110vh; */
+    height: auto;
     background-color: #efefef;
     position:absolute;
     z-index: 100;
     top:0;
     right:-110vw;
+    /* overflow-y: auto; */
+    /* 터치 스크롤 고정 */
+    /* touch-action: none; */
 }
 header .menu .menu_in {
     width:100%;
-    height: 160px;
+    height: 40vw;
+    /* height: 160px; */
     background-color: #78181C;
-    padding:10vw 7vw 7vw;
+    padding:10vw 7vw 0;
 }
 header .menu .menu_in .search_lang,
 header .menu .menu_in .mo_top_menu ul {
@@ -167,6 +176,8 @@ header .menu .close_btn .close_icon {
 header .menu nav {
     width: 100%;
     padding:10vw;
+    /* 넘치면 스크롤 가능하게 함 */
+    /* overflow:auto; */
 }
 /* 주메뉴 */
 header .menu nav ul li a {
@@ -261,9 +272,10 @@ section .b_txt {
     margin-top: 10vw;
     margin-left: 8vw;
     margin-bottom: 8vw;
+    width: 85%;
 }
 section .b_txt p {
-    width: 80%;
+    width: 100%;
     font-size: 1.2rem;
 }
 section h1 {
@@ -299,8 +311,10 @@ section .hover {
     flex-flow: column nowrap; /* 열기준 줄바꿈 허용 안함 */
 }
 .banner1 ul li {
-    width:100%; height: 115px;
-    padding:1.5vw 8vw 0.8vw;
+    justify-content: center;
+    align-items: center;
+    width:100%; height: 130px;
+    padding:1vw 8vw 0.8vw;
     position: relative;
 }
 .s2 .banner1 ul li:first-child {
@@ -313,13 +327,15 @@ section .hover {
     background-color: #F1DEC9;
 }
 .banner1 ul li .icon_txt {
+    height: 100%;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     padding: 3vw 2vw;
-    position: absolute;
 }
 .banner1 ul li .icon_txt .icon_bg {
-    width:70px; height: 70px;
+    width:80px; height: 80px;
     background-color: #fff;
     border-radius: 50%;
     /* 아이콘 가운데로 정렬 */
@@ -329,16 +345,17 @@ section .hover {
 }
 .banner1 ul li:first-child .icon_txt .icon_bg , 
 .banner1 ul li:nth-child(2) .icon_txt .icon_bg {
-    padding:4vw;
+    padding:15px;
 }
 .banner1 ul li:last-child .icon_txt .icon_bg {
-    padding:3vw;
+    padding:10px;
 }
 .banner1 ul li p {
     margin-left: 0;
 }
 .banner1 ul li .icon_txt .txt {
     margin-left: 7vw;
+    height: 70px;
     /* 사이즈 조정이 안되서 맞춤*/
     width: 70%;
 }
@@ -354,25 +371,20 @@ section .hover {
     margin:0 10vw;
     text-align: center;
     /* 높이 설정해야 버튼 위치 조정 가능 */
-    height: 350px;
+    /* height: 350px; */
 }
 .s3 .swiper .swiper-wrapper .swiper-slide p {
     margin-top: 10px;
 }
 .swiper-button-prev i, .swiper-button-next i{
-    color: #000;
-    font-size: 12vw;
+    color: #666;
+    font-size: 1.8rem;
 }
 .swiper-button-prev:after, .swiper-button-next:after {
     display: none;
 }
-.s3 .swiper-button-prev {
+.s3 .swiper-button-prev, .s3 .swiper-button-next {
     top: 40%;
-    left: -0.2vw;
-}
-.s3 .swiper-button-next {
-    top: 40%;
-    right: -0.2vw;
 }
 
 /* section4*/
@@ -409,9 +421,6 @@ section .hover {
 }
 
 /* section5 */
-.s5 .banner1 ul li {
-    padding-top: 2vw;
-}
 .s5 .banner1 ul li:first-child {
     background-color: #FFBDCA;
 }
@@ -421,23 +430,16 @@ section .hover {
 .s5 .banner1 ul li:last-child {
     background-color: #800019;
 }
-.s5 .banner1 ul li .icon_txt .txt {
-    width: 63%;
-}
 .s5 .banner1 ul li:first-child .icon_txt .icon_bg {
-    padding:3vw;
+    padding:15px;
 }
 .s5 .banner1 ul li:nth-child(2) .icon_txt .icon_bg {
-    padding-top: 4vw;
+    padding: 12px;
 }
 .s5 .banner1 ul li:last-child .icon_txt .icon_bg {
-    background-color: transparent;
-    width: 70px; height: 70px;
     border:2px solid #fff;
-    position: relative;
-}
-.s5 .banner1 ul li:last-child .icon_txt .icon_bg img {
-    position: absolute;
+    background-color: #800019;
+    padding:10px;
 }
 .s5 .banner1 ul li:last-child .txt {
     color: #fff;
@@ -485,6 +487,7 @@ section .hover {
 }
 .s6 .banner6 ul li hr {
     display: block;
+    border:1px solid rgba(255,255,255,0.8);
 }
 .s6 .banner6 ul li p {
     margin-top: 2vw;
@@ -493,9 +496,6 @@ section .hover {
 .s7 {
     color: #fff;
     background-color: #78181C;
-}
-.s7 .b_txt {
-    width: 100%;
 }
 .s7 .banner7 {
     width:100%;
@@ -530,16 +530,16 @@ section .hover {
     left: 0; top:0;
 }
 .s7 .banner7 ul li .s7_hover1 {
-    background-color:#DFDFDF;
+    background-color:#d3d3d3;
 }
 .s7 .banner7 ul li .s7_hover2 {
     background-color:#474747;
 }
 .s7 .banner7 ul li .s7_hover3 {
-    background-color:#BABABA;
+    background-color:#a9a9a9;
 }
 .s7 .banner7 ul li .s7_hover4 {
-    background-color:#858585;
+    background-color:#6b6b6b;
 }
 .s7 .banner7 ul li .txt {
     position:absolute;
@@ -569,7 +569,7 @@ section .hover {
 }
 .s7 .banner7 ul li .s7_deco3 {
     right:0; top:0;
-    background-color: rgba(51,51,51,0.5);
+    background-color: rgba(67, 67, 67, 0.5);
 }
 .s7 .banner7 ul li .s7_deco4 {
     left:0; top:0;
@@ -638,18 +638,19 @@ footer .service_family .service ul .service_box li {
     margin: 0 0.7vw;
     background-color: #eee;
     border-radius: 50%;
-    width: 55px; height: 55px;
-    padding:2vw;
+    width: 16vw; height: 16vw;
+    padding:12px;
     /* 아이콘 가운데로 정렬 */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-footer .service_family .service ul .service_box li:nth-child(2) {
-    padding:3vw;
+footer .service_family .service ul .service_box li:nth-child(2),
+footer .service_family .service ul .service_box li:nth-child(4) {
+    padding:15px;
 }
 footer .service_family .service ul .service_box li:nth-child(3) {
-    padding:1vw;
+    padding:5px;
 }
 footer .service_family .family {
     width: 150px; 
@@ -703,6 +704,7 @@ header {
 }
 header .center_box {
     padding:1vw;
+    height: 100%;
 }
 /* 로고 파일 수정 예정 */
 header .logo {
@@ -752,11 +754,12 @@ header .pc_top_menu ul li a  span {
     margin-right: 0.7vw;
 }
 header .menu {
-    height: 140vh;
+    height: auto;
 }
 header .menu .menu_in {
     padding:4vw;
-    height: 200px;
+    /* height: 200px; */
+    height:20vw;
     background-color: #111;
 }
 header .menu .menu_in .search_lang .search {
@@ -811,6 +814,8 @@ section .movie {
     width:100%;
     height:100%;
     overflow: hidden;
+    /* 클릭못하게 막기 : 동영상 위에서 마우스 스크롤 안되는 현상 해결  */
+    pointer-events : none;
 }
 section .movie iframe {
     position:absolute;
@@ -819,8 +824,6 @@ section .movie iframe {
     transform: translate(-50%, -50%);
     /* 동영상 사이즈 수정 */
     width: 154%;
-    /* 클릭못하게 막기 */
-    pointer-events : none;
 }
 section .main_icon {
     width: 100%; 
@@ -875,16 +878,18 @@ section p {
     left: 50%; top: 50%;
     transform:translate(-50%, -50%);
     align-items: center;
+    position: absolute;
+    justify-content: flex-start;
 }
 .banner1 ul li .icon_txt .icon_bg {
-    width: 11vw; height: 11vw;
+    width: 120px; height: 120px;
 }
 .banner1 ul li:first-child .icon_txt .icon_bg {
-    padding:2.5vw;
+    padding:25px;
 }
 .banner1 ul li:nth-child(2) .icon_txt .icon_bg,
 .banner1 ul li:last-child .icon_txt .icon_bg {
-    padding: 2vw;
+    padding:23px;
 }
 .banner1 ul li .icon_txt .txt {
     /*  */
@@ -911,11 +916,10 @@ section p {
 }
 .s3 .swiper{
     margin: 0 8vw;
-    /* 수정 예정 (텍스트때문) */
-    height: 330px;
+    height: auto;
 }
 .swiper-button-prev i, .swiper-button-next i{
-    font-size: 5vw;
+    font-size: 3vw;
 }
 .s3 .swiper-button-prev {
     left: 2vw;
@@ -954,16 +958,13 @@ section p {
 .s5 .banner1 ul li:last-child .icon_txt .txt hr {
     border: 1px solid #fff;
 }
-.s5 .banner1 ul li:first-child .icon_txt .icon_bg {
-    padding:2vw;
+.s5 .banner1 ul li:first-child .icon_txt .icon_bg,
+.s5 .banner1 ul li:nth-child(2) .icon_txt .icon_bg {
+    padding:20px;
 }
 .s5 .banner1 ul li:last-child .icon_txt .icon_bg {
-    background-color: transparent;
-    width: 11vw; height: 11vw;
     border:3px solid #fff;
-}
-.s5 .banner1 ul li:nth-child(2) .icon_txt .icon_bg {
-    padding: 1.8vw;
+    padding: 18px;
 }
 
 /* tablet버전 section6 - 풀무원 3번 */
@@ -986,9 +987,6 @@ section p {
 }
 .s6 .banner6 ul li h2 {
     margin-bottom: 2vw;
-}
-.s6 .banner6 ul li hr {
-    border:1px solid rgba(255,255,255,0.8);
 }
 /* tablet버전 section7 - 풀무원 5번 */
 .s7 .banner7 ul li .txt h2 {
@@ -1038,15 +1036,19 @@ footer .service_family .service ul .service_box li:nth-child(2) {
     padding:1.5vw;
 }
 footer .service_family .family  {
-    width: 230px;
+    width: 150px;
 }
 footer .service_family .family .family_title {
-    padding-left: 28%;
+    /* padding-left: 28%; */
 }
 
 }
 /* pc버전(1400px 이상) */
 @media screen and (min-width:1400px) {
+.wrap .center_box {
+    width: 75vw;
+    margin: 0 auto;
+}
 header {
     height:130px;
 }
@@ -1146,7 +1148,7 @@ header .menu .menu_in .search_lang .search input {
 /* 검색 입력란을 클릭했을 때 테두리 색과 모서리 둥글게*/
 header .menu .menu_in .search_lang .search input:focus {
     border-radius: 4px;
-    outline:1px solid #ddd;
+    border:1px solid #ddd;
 }
 header .menu .menu_in .search_lang .search {
     position: relative;
@@ -1161,7 +1163,7 @@ header .menu .menu_in .search_lang .search a .search_icon{
 }
 header .menu .menu_in .language {
     padding:0.5vw 0.4vw;
-    width:4vw;
+    width:4vw; height: 100%;
     background-color: #efefef;
 }
 header .menu .menu_in .language select {
@@ -1282,6 +1284,293 @@ section .main_icon ul li:last-child {
 }
 section .main_icon ul li:hover {
     background-color: rgba(23, 23, 23, 0.6);
+}
+/* section2 */
+section .b_txt {
+    margin-left: 0;
+    margin-top: 3vw;
+    margin-bottom: 4vw;
+}
+section .b_txt h1 {
+    margin-bottom: 1vw;
+}
+.banner1 { margin-bottom: 5vw;}
+.banner1 ul {
+    flex-flow: row nowrap;
+    padding: 0;
+}
+.banner1 ul li {
+    height: 30vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.s2 .banner1 ul li:first-child {
+    background-image: url(../img/s2_bg_1.jpg);
+}
+.s2 .banner1 ul li:nth-child(2) {
+    background-image: url(../img/s2_bg_2.jpg);
+}
+.s2 .banner1 ul li:last-child {
+    background-image: url(../img/s2_bg_3.jpg);
+}
+.s2 .banner1 ul li:first-child .hover {
+    background-color: #F1DEC9;
+}
+.s2 .banner1 ul li:nth-child(2) .hover {
+    background-color: #E0CCBE;
+}
+.s2 .banner1 ul li:last-child .hover {
+    background-color: #F1DEC9;
+}
+.banner1 ul li .icon_txt {
+    width: 65%;
+    top: 40%;
+}
+.banner1 ul li .icon_txt .icon_bg {
+    width: 7vw; height: 7vw;
+}
+.s2 .banner1 ul li:first-child .icon_txt .icon_bg{
+    padding:2vw;
+    /*  */
+    background-color: #F1DEC9;
+}
+.s2 .banner1 ul li:nth-child(2) .icon_txt .icon_bg {
+    padding:1.7vw;
+    background-color: #E0CCBE;
+}
+.s2 .banner1 ul li:last-child .icon_txt .icon_bg{
+    padding:1.5vw;
+    background-color: #F1DEC9;
+}
+.banner1 ul li .icon_txt .txt {
+    opacity: 0;
+    transition: all 0.5s;
+}
+/* banner1의 li에 마우스 오버하면 .hover와 .txt 보임 */
+.banner1 ul li:hover .hover {
+    display: block;
+    width: 100%; height: 100%;
+}
+.banner1 ul li:first-child:hover .icon_txt .icon_bg,
+.banner1 ul li:nth-child(2):hover .icon_txt .icon_bg,
+.banner1 ul li:last-child:hover .icon_txt .icon_bg {
+    background-color: #fff;
+}
+.banner1 ul li:hover .txt {
+    opacity: 1;
+}
+/* section3 - pc */
+.s3 .goods .b_txt {
+    margin: 0;
+    margin-top: 1vw;
+}
+.s3 .goods .b_txt h1 {
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 1.5vw;
+}
+.s3 .swiper {
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 3vw;
+}
+.swiper-button-prev i, .swiper-button-next i {
+    font-size: 2.1vw;
+}
+/* section4 (풀무원 3번)- pc */
+.s4 .center_box {
+    display: flex;
+    padding-top: 5vw;
+}
+.s4 .b_txt {
+    margin-top: 0;
+    margin-right: 2vw;
+}
+.s4 .banner4 {
+    padding: 0;
+}
+/* 마지막 li부터 3개만 선택 */
+.s4 .banner4 ul li:nth-child(-n+3){
+    margin-top: 1vw;
+}
+.s4 .banner4 ul li .photo {
+    height: 11vw;
+}
+.s4 .banner4 ul li span {
+    margin-top: 0;
+    margin-bottom: 1.5vw;
+}
+
+/* section5 - pc */
+/* 수정요망 */
+.s5 .banner1 ul li:first-child {
+    background-image: url(../img/sele_01.jpg);
+}
+.s5 .banner1 ul li:nth-child(2) {
+    background-image: url(../img/sele_02.jpg);
+}
+.s5 .banner1 ul li:last-child {
+    background-image: url(../img/sele_03.png);
+}
+.s5 .banner1 ul li:first-child .hover {
+    background-color: #FFBDCA;
+}
+.s5 .banner1 ul li:nth-child(2) .hover {
+    background-color: #FF99AD;
+}
+.s5 .banner1 ul li:last-child .hover {
+    background-color: #800019;
+}
+/* 수정요망 */
+.s5 .banner1 ul li .icon_txt {
+    width: 70%;
+}
+.s5 .banner1 ul li:first-child .icon_txt .icon_bg{
+    padding:1.5vw;
+    background-color: #FFBDCA;
+}
+.s5 .banner1 ul li:nth-child(2) .icon_txt .icon_bg {
+    padding:1.2vw;
+    background-color: #FF99AD;
+}
+.s5 .banner1 ul li:last-child .icon_txt .icon_bg{
+    opacity: 0;
+    background-color: #800019;
+    border:3px solid #fff;
+}
+.s5 .banner1 ul li:first-child:hover .icon_txt .icon_bg,
+.s5 .banner1 ul li:nth-child(2):hover .icon_txt .icon_bg{
+    background-color: #fff;
+}
+.s5 .banner1 ul li:last-child:hover .icon_txt .icon_bg {
+    opacity: 1;
+}
+.s5 .banner1 ul li .icon_txt .txt h2 {
+    height: 50px;
+}
+/* section6 - pc (풀무원4) */
+.s6 .banner6 {
+    margin-bottom:3vw;
+    padding:5vw 13vw 0;
+}
+.s6 .banner6 ul li {
+    width: 20%;
+}
+.s6 .banner6 ul li h2,
+.s6 .banner6 ul li p {
+    margin-bottom: 1.5vw;
+}
+/* section7 - pc (풀무원5 마지막) */
+.s7 > div > div {
+    display: flex;
+    height: 100%;
+}
+.s7 .b_txt {
+    width: 50%;
+    padding: 15vw 5vw 0 20vw;
+}
+.s7 .banner7 {
+    width: 55%; 
+    height: 100%;
+    margin-top: 0;
+}
+.s7 .banner7 ul {
+    height: 100%;
+}
+.s7 .banner7 ul li {
+    width: 50%; height: 50%;
+}
+.s7 .banner7 ul li .txt {
+    height: 100%;
+}
+.s7 .banner7 ul li .txt h2 {
+    margin-bottom: 1vw;
+}
+.s7 .banner7 ul li .txt  hr {
+    border: none;
+    width: 50%; height: 0px;
+    background-color: #fff;
+    transition: height 0.3s;
+}
+.s7 .banner7 ul li .txt p{
+    margin-top: 1vw;
+    text-align: center;
+    width: 45%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.s7 .banner7 ul li .small_deco {
+    width: 6vw; height: 6vw;
+}
+/* s7의 .banner7의 li에 마우스오버했을 때 자식객체 나타남  */
+.s7 .banner7 ul li:hover .hover {
+    display: block;
+}
+.s7 .banner7 ul li:hover .txt hr {
+    height: 6px;
+}
+.s7 .banner7 ul li:hover .txt p {
+    opacity: 1;
+}
+/* footer - pc */
+footer {
+    padding:5vw;
+}
+footer .footer_logo {
+    width: 12%;
+    margin:0 auto;
+}
+footer .info {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2vw;
+}
+footer .info ul li a {
+    font-size: 1.2rem;
+}
+footer address {
+    margin-top: 2vw;
+    font-size: 1.1rem;
+}
+footer address .br_m {display: none;}
+footer p {
+    justify-content: center;
+    margin-top: 2vw;
+    /* text-align: center; */
+}
+footer .service_family {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin:0 auto;
+    margin-top: 2vw;
+    /* width: 60%; */
+    width: 800px;
+}
+footer .service_family p {
+    padding-bottom: 1vw;
+}
+footer .service_family .service {
+    width: 70%;
+}
+footer .service_family .service ul .service_box li{
+    padding:0.8vw;
+}
+footer .service_family .service ul .service_box li:nth-child(2){
+    padding: 1vw;
+}
+footer .service_family .service ul .service_box li:nth-child(3){
+    padding:0.5vw;
+}
+footer .service_family .service ul .service_box li:last-child{
+    padding:1.2vw;
+}
+footer .service_family .family {
+    width:21%;
+    margin-top: 3vw;
+}
+footer .service_family .family .family_title {
+    padding-left: 10%;
 }
 
 }
