@@ -1066,7 +1066,7 @@ header .logo a {
     background-image: url(../img/logo_pc.png);
 }
 header .right_area {
-    width: 83.5%;
+    width: 83%;
     flex-flow: column nowrap;
     align-items: normal;
 }
