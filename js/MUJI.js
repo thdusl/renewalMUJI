@@ -65,8 +65,9 @@ $(function(){
         e.preventDefault();
         $(this).find("span").css("transform","rotateZ(-180deg)");
         $(".family_list").slideDown();
+        
     });
-    $(".family_title a").mouseleave(function(){
+    $(".family").mouseleave(function(){
         $(this).find("span").css("transform","rotateZ(0deg)");
         $(".family_list").slideUp();
     });
