@@ -38,6 +38,27 @@ $(function(){
                 $(this).next().slideUp();
             }
         });
+        //모바일 section 링크기능
+        $(".main_icon > ul > li > a").click(function(e){
+            e.preventDefault();
+
+            if (this.hash == "#anchor3"){
+                $('html, body').animate({scrollTop:$("#s3").offset().top},300);
+            }
+            if (this.hash == "#anchor4"){
+                $('html, body').animate({scrollTop:$("#s4").offset().top},300);
+            }
+            if (this.hash == "#anchor5"){
+                $('html, body').animate({scrollTop:$("#s5").offset().top},300);
+            }
+            if (this.hash == "#anchor6"){
+                $('html, body').animate({scrollTop:$("#s6").offset().top},300);
+            }
+            if (this.hash == "#anchor7"){
+                $('html, body').animate({scrollTop:$("#s7").offset().top},300);
+            }
+        });
+
     //접속한 기기의 가로길이가 1400px이상이면 주메뉴에 마우스 오버했을 때 서브메뉴와 서브메뉴 배경이 나타나고, 마우스 아웃했을 때 서브메뉴와 서브메뉴 배경이 사라짐
     } else {
         //pc버전 내비게이션
