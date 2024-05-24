@@ -575,6 +575,10 @@ section .hover {
     left:0; top:0;
     background-color: rgba(17,17,17,0.5);
 }
+/* footer 툴팁 없앰 */
+#fp-nav ul li:last-child {
+    display: none;
+}
 /* footer */
 footer {
     width:100%;
